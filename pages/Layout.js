@@ -121,6 +121,7 @@ const ScrollToTop = styled.a`
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  display: block;
 `
 
 const NavLogoImage = styled.img`
@@ -222,7 +223,7 @@ export default class Layout extends React.Component {
           {this.props.children}
         </Content>
         <Footer>
-          <ScrollToTop href="#" className="scrollToTop" style={{display: 'block'}}><i className="fa fa-angle-up"></i></ScrollToTop>
+          <ScrollToTop href="#"><i className="fa fa-angle-up"></i></ScrollToTop>
           <NavItems>
             <NavItem>
               <NavLink href="https://codecommission.com" target="_blank" rel="noopener">©2017 linklet.run · CodeCommission ·</NavLink>

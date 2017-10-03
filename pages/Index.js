@@ -177,6 +177,7 @@ const Video = styled.img`
   width: 60%;
   height: 60%;
 `
+
 const Code = styled.pre`
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
