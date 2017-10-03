@@ -211,10 +211,10 @@ export default class Layout extends React.Component {
         </div>
         <Nav hasScrolled={this.state.hasScrolled}>
           <NavLogoLink href="/"><NavLogoImage src="/icon-linklet.svg" alt="icon linklet logo" /><NavLogoBrand>Linklet</NavLogoBrand></NavLogoLink>
-          <NavItems items={ ['home', 'features', 'about'] } currentClassName="isActive">
-            <NavItem><NavLink href={'/#home'}>Home</NavLink></NavItem>
-            <NavItem><NavLink href={'/#features'}>features</NavLink></NavItem>
+          <NavItems items={ ['features', 'about', 'examples'] } currentClassName="isActive">
+            <NavItem><NavLink href={'/#features'}>Features</NavLink></NavItem>
             <NavItem><NavLink href={'/#about'}>About</NavLink></NavItem>
+            <NavItem><NavLink href={'/#examples'}>Examples</NavLink></NavItem>
             <NavItem><NavLink href={'https://github.com/codecommission/linklet/tree/master/docs'}><i className="fa fa-github" aria-hidden="true" />&nbsp;Docs</NavLink></NavItem>
           </NavItems>
         </Nav>

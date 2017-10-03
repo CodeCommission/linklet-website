@@ -169,8 +169,21 @@ const AboutInfo = styled.div`
 const Video = styled.img`
   border: 1px solid #eee;
   padding: 10px;
+  width: 60%;
+  height: 60%;
 `
-
+const Code = styled.pre`
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-size: 12px;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+`
 export default class Index extends React.Component {
   render() {
     return (
@@ -186,7 +199,7 @@ export default class Index extends React.Component {
                 Run code with a link
               </JumbotronHeaderBig>
               <JumbotronHeaderSmall>
-                Async function as HTTP microservice · no hassles · only code
+                Only one async function · as HTTP Microservice · No Hassles
               </JumbotronHeaderSmall>
               <br /><br />
               <CTAButton href="https://github.com/codecommission/linklet/blob/master/docs/getting-started.md#installation">npm install -g linklet</CTAButton>
@@ -208,7 +221,7 @@ export default class Index extends React.Component {
 
           <section id="features">
             <SectionHeading>
-              <SectionTitleSmall>Why Linklet async HTTP Microservices?</SectionTitleSmall>
+              <SectionTitleSmall>What Linklet Does?</SectionTitleSmall>
               <SectionTitleLarge>Features</SectionTitleLarge>
             </SectionHeading>
 
@@ -308,7 +321,7 @@ export default class Index extends React.Component {
 
           <section id="about">
             <SectionHeading>
-              <SectionTitleSmall>What it Does?</SectionTitleSmall>
+              <SectionTitleSmall>Why Linklet Microservices?</SectionTitleSmall>
               <SectionTitleLarge>Run your code in seconds</SectionTitleLarge>
             </SectionHeading>
 
@@ -323,7 +336,16 @@ export default class Index extends React.Component {
                         </AboutInfo>
                     </AboutInfoContainer>
                 </div>
-                <div className="wow fadeInLeft animated" data-wow-delay="0.6s">
+                <div className="wow fadeInRight animated" data-wow-delay="0.6s">
+                    <AboutInfoContainer>
+                      <AboutIcon><i className="fa fa-cubes"></i></AboutIcon>
+                      <AboutInfo>
+                        <h3>Lightweight</h3>
+                        <p>Simple, modular and composable is the power of asynchronous functions to build HTTP based Microservices.</p>
+                      </AboutInfo>
+                    </AboutInfoContainer>
+                </div>
+                <div className="wow fadeInLeft animated" data-wow-delay="0.9s">
                     <AboutInfoContainer>
                       <AboutIcon><i className="fa fa-ship"></i></AboutIcon>
                       <AboutInfo>
@@ -333,22 +355,82 @@ export default class Index extends React.Component {
                     </AboutInfoContainer>
                 </div>
               </div>
+            </AboutSectionContent>
+
+          </section>
+
+          <SectionDevider />
+
+          <section id="examples">
+            <SectionHeading>
+              <SectionTitleSmall>How to use?</SectionTitleSmall>
+              <SectionTitleLarge>Examples</SectionTitleLarge>
+            </SectionHeading>
+
+            <AboutSectionContent>
               <div>
-                <div className="wow fadeInRight animated" data-wow-delay="0.3s">
+                <div className="wow fadeInLeft animated" data-wow-delay="0.3s">
                     <AboutInfoContainer>
-                      <AboutIcon><i className="fa fa-plug"></i></AboutIcon>
+                        <AboutIcon><i className="fa fa-cube"></i></AboutIcon>
+                        <AboutInfo>
+                            <h3><a href="https://linklet-basic.cloud.dropstack.run" target="_blank">HTTP/JSON Response</a></h3>
+                            <Code>{`curl -XGET \\
+  -H "Content-Type: application/json" \\
+  https://linklet-basic.cloud.dropstack.run`}</Code>
+                        </AboutInfo>
+                    </AboutInfoContainer>
+                </div>
+                <div className="wow fadeInLeft animated" data-wow-delay="0.6s" style={{display: 'none'}}>
+                    <AboutInfoContainer>
+                      <AboutIcon><i className="fa fa-cube"></i></AboutIcon>
                       <AboutInfo>
-                          <h3>Experience</h3>
-                          <p>Just talk WEBful - programmable Web-Links that responds asynchronous to HTTP requests. That's it.</p>
+                          <h3>Production Ready</h3>
+                          <p>Prepared to deploy Microservices fast and easy.</p>
                       </AboutInfo>
                     </AboutInfoContainer>
                 </div>
-                <div className="wow fadeInRight animated" data-wow-delay="0.6s">
+              </div>
+              <div>
+                <div className="wow fadeInRight animated" data-wow-delay="0.3s">
                     <AboutInfoContainer>
-                      <AboutIcon><i className="fa fa-cubes"></i></AboutIcon>
+                      <AboutIcon><i className="fa fa-cube"></i></AboutIcon>
                       <AboutInfo>
-                        <h3>Lightweight</h3>
-                        <p>Simple, modular and composable is the power of asynchronous functions to build HTTP based Microservices.</p>
+                          <h3><a href="https://linklet-json-body-parsing.cloud.dropstack.run" target="_blank">Parse HTTP/JSON Body</a></h3>
+<Code>{`curl -XPOST \\
+  -H "Content-Type: application/json" \\
+  -d '{"hello":"world"}' \\
+  https://linklet-json-body-parsing.cloud.dropstack.run`}</Code>
+                      </AboutInfo>
+                    </AboutInfoContainer>
+                </div>
+                <div className="wow fadeInRight animated" data-wow-delay="0.6s" style={{display: 'none'}}>
+                    <AboutInfoContainer>
+                      <AboutIcon><i className="fa fa-cube"></i></AboutIcon>
+                      <AboutInfo>
+                        <h3>Functional composition</h3>
+                        <p>Develop HTTP responses by functional composition to Higher-Order-Functions.</p>
+                      </AboutInfo>
+                    </AboutInfoContainer>
+                </div>
+              </div>
+              <div>
+                <div className="wow fadeInRight animated" data-wow-delay="0.3s">
+                    <AboutInfoContainer>
+                      <AboutIcon><i className="fa fa-cube"></i></AboutIcon>
+                      <AboutInfo>
+                          <h3><a href="https://linklet-external-api-call.cloud.dropstack.run" target="_blank">External HTTP call</a></h3>
+                          <Code>{`curl -XGET \\
+  -H "Content-Type: application/json" \\
+  https://linklet-external-api-call.cloud.dropstack.run`}</Code>
+                      </AboutInfo>
+                    </AboutInfoContainer>
+                </div>
+                <div className="wow fadeInRight animated" data-wow-delay="0.6s" style={{display: 'none'}}>
+                    <AboutInfoContainer>
+                      <AboutIcon><i className="fa fa-cube"></i></AboutIcon>
+                      <AboutInfo>
+                        <h3>Fast</h3>
+                        <p>Reduced request/response to reach ultra-high performance.</p>
                       </AboutInfo>
                     </AboutInfoContainer>
                 </div>
