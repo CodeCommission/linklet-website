@@ -88,6 +88,11 @@ const SectionTitleLarge = styled.h2`
   font-size: 35px;
   text-transform: uppercase;
   margin: 0px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `
 
 const TechStackContainer = styled.div`
@@ -364,7 +369,11 @@ export default class Index extends React.Component {
           <section id="examples">
             <SectionHeading>
               <SectionTitleSmall>How to use?</SectionTitleSmall>
-              <SectionTitleLarge>Examples</SectionTitleLarge>
+              <SectionTitleLarge>
+                <a href="https://github.com/codecommission/linklet-examples" target="_blank">
+                  <i className="fa fa-github" aria-hidden="true" />&nbsp;Examples
+                </a>
+              </SectionTitleLarge>
             </SectionHeading>
 
             <AboutSectionContent>
