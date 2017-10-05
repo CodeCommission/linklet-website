@@ -123,13 +123,15 @@ const TechStackIcon = styled.img`
 `
 
 const AboutSectionContent = styled.div`
+  margin: 12rem;
   display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   flex-direction: row;
-  margin-right: 20px;
-  justify-content: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+
 `
 
 const AboutInfoContainer = styled.div`
