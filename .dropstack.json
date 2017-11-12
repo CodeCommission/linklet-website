@@ -2,8 +2,9 @@
   "variables": "",
   "instances": 1,
   "alias": "www.linklet.run",
-  "type": "npm",
+  "type": "node8",
   "excludes": [],
+  "stateful": false,
   "serviceUrl": "zkdsjcwu.cloud.dropstack.run",
   "name": "zkdsjcwu"
 }
