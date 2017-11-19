@@ -1,9 +1,9 @@
 import React from "react";
-import "./Layout.css";
-import "wow.js/css/libs/animate.css";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Scrollspy from "react-scrollspy";
+import "./Layout.css";
+import "wow.js/css/libs/animate.css";
 
 const LayoutContainer = styled.div`
   margin: 0;

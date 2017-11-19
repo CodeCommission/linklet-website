@@ -337,7 +337,9 @@ export default class Index extends React.Component {
 
           <SectionContent id="about">
             <SectionHeading>
-              <SectionTitleSmall>Why Linklet Microservices?</SectionTitleSmall>
+              <SectionTitleSmall>
+                Why Linklet Function-as-a-Service?
+              </SectionTitleSmall>
               <SectionTitleLarge>Run your code in seconds</SectionTitleLarge>
             </SectionHeading>
 
